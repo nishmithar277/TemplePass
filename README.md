@@ -1,6 +1,6 @@
 # TemplePass
 
-Simple Temple/Event Crowd Booking System for the Full Stack Development Capstone Assessment.
+Simple Temple/Event Crowd Booking System 
 
 ## Features
 
