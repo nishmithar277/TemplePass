@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TemplePass - Temple Visit Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">TemplePass</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#book">Book Visit</a>
+    <a href="#bookings">My Bookings</a>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <div>
+    <p class="label">TEMPLE VISIT BOOKING</p>
+    <h1 id="eventName">Sri Krishna Temple</h1>
+    <p id="eventDescription">Loading...</p>
+    <a href="#book" class="button">Book a Visit</a>
+  </div>
+</section>
+
+<section class="info">
+  <div><strong>Location</strong><span id="location">Loading...</span></div>
+  <div><strong>Temple Timings</strong><span id="timings">Loading...</span></div>
+  <div><strong>Booking</strong><span>Online</span></div>
+</section>
+
+<section id="book" class="section">
+  <h2>Book Your Visit</h2>
+  <p>Select a date, session and enter visitor details.</p>
+
+  <div class="grid">
+    <form id="bookingForm" class="card">
+      <input type="hidden" id="editId">
+
+      <label>Visitor Name</label>
+      <input id="name" type="text" placeholder="Enter your name" required>
+
+      <label>Mobile Number</label>
+      <input id="contact" type="tel" maxlength="10" placeholder="10-digit mobile number" required>
+
+      <label>Visit Date</label>
+      <select id="date" required></select>
+
+      <label>Number of Visitors</label>
+      <input id="visitors" type="number" min="1" max="10" value="1" required>
+
+      <label>Session</label>
+      <div id="sessions" class="sessions"></div>
+
+      <button class="button" type="submit" id="submitButton">Confirm Booking</button>
+      <button class="button light hidden" type="button" id="cancelEdit">Cancel Edit</button>
+    </form>
+
+    <div class="card summary">
+      <h3>Booking Summary</h3>
+      <p><strong>Date:</strong> <span id="summaryDate">Not selected</span></p>
+      <p><strong>Session:</strong> <span id="summarySession">Not selected</span></p>
+      <p><strong>Visitors:</strong> <span id="summaryVisitors">1</span></p>
+      <p><strong>Status:</strong> Ready</p>
+    </div>
+  </div>
+</section>
+
+<section id="bookings" class="section grey">
+  <h2>My Bookings</h2>
+
+  <div class="search">
+    <input id="search" type="search" placeholder="Search by booking ID, name or mobile">
+    <button class="button" id="searchButton">Search</button>
+  </div>
+
+  <div id="bookingList"></div>
+</section>
+
+<div id="message"></div>
+
+<footer>
+  <strong>TemplePass</strong>
+  <span>Full Stack Development Capstone Project</span>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
